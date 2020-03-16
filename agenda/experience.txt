@@ -1,0 +1,13 @@
+1.文件名尽量取英文，不然keil5容易出现乱码
+2.J-Link与开发板的连接
+3.J-link可以给班子供电（与link板子上的跳线帽有关），但供电有时不太好用，这个时候可以尝试一下usb供电
+4.以后如果用电脑usb口供电的话，尽量用那种充电宝或者小台灯什么的送的usb供电线，不要用手机那种usb数据线，那种数据线供电容易出问题
+5.无线调试器使用方法 nanoDAP-wireless（小陀螺）
+https://github.com/wuxx/nanoDAP-wireless
+6.用杜邦线之前最好用万用表蜂鸣档测一下导通
+7.调车重新写的函数记得把一些特殊的问题写上注释，还有把自己名字写旁边
+8.GitHub Desktop的使用：
+https://desktop.github.com/
+https://www.cnblogs.com/qq291035606/p/10612796.html
+https://www.jianshu.com/p/6063974849db
+organization下面开了一个公开的repository,后面会把东西传上去,各位掌握用法之后把 repository克隆下来,克隆的时候可能会遇到下载速度慢导致失败的问题,这个可能需要改host文件然后刷新DNS,或者改用手机热点下载,遇到问题实在解决不了geogle一下或者找我都行。大一的同学也弄一下。
