@@ -1,0 +1,80 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.21.1.0
+Copyright (C) 2016 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: 成明乐 admin, 长安大学, LIC=0VRHL-0KQ16-KTE3H-WK4ZE-VHYE5-3Q8TT
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Professional  Version: 5.21a
+Toolchain Path:  D:\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 3 (build 300)
+Assembler:       Armasm.exe V5.06 update 3 (build 300)
+Linker/Locator:  ArmLink.exe V5.06 update 3 (build 300)
+Library Manager: ArmAr.exe V5.06 update 3 (build 300)
+Hex Converter:   FromElf.exe V5.06 update 3 (build 300)
+CPU DLL:         SARMCM3.DLL V5.21a
+Dialog DLL:      DCM.DLL V1.13.8.0
+Target DLL:      Segger\JL2CM3.dll V2.99.23.0
+Dialog DLL:      TCM.DLL V1.14.14.0
+ 
+<h2>Project:</h2>
+C:\Users\admin\Desktop\360\yaw角度差值\RM战车2.0新主控板标准库版\RM战车.uvprojx
+Project File Date:  05/22/2019
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 3 (build 300)', folder: 'D:\ARM\ARMCC\Bin'
+Build target 'Target 1'
+compiling main.c...
+USER\main.c(115): warning:  #940-D: missing return statement at end of non-void function "self_static_pid"
+  }
+USER\main.c(89): warning:  #177-D: variable "stable" was declared but never referenced
+  	int stable;
+USER\main.c(94): warning:  #550-D: variable "output" was set but never used
+  	int16_t output;
+USER\main.c(182): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		if(angle_err<-0.001||angle_err>0.001)
+USER\main.c(348): warning:  #1-D: last line of file ends without a newline
+  }
+USER\main.c(126): warning:  #177-D: variable "mix1" was declared but never referenced
+    int16_t mix1=0x00;	
+USER\main.c(127): warning:  #177-D: variable "mix2" was declared but never referenced
+  	int16_t mix2=0x00;
+USER\main.c(128): warning:  #177-D: variable "mix3" was declared but never referenced
+  	int16_t mix3=0x00;	
+USER\main.c(129): warning:  #177-D: variable "nub" was declared but never referenced
+  	u8 nub=0,flagsh=1;
+USER\main.c(129): warning:  #177-D: variable "flagsh" was declared but never referenced
+  	u8 nub=0,flagsh=1;
+USER\main.c(130): warning:  #177-D: variable "time" was declared but never referenced
+  	u16 time=0;
+USER\main.c(134): warning:  #177-D: variable "a" was declared but never referenced
+  	u8 a=0;
+USER\main.c: 12 warnings, 0 errors
+linking...
+Program Size: Code=22524 RO-data=692 RW-data=1556 ZI-data=4412  
+FromELF: creating hex file...
+".\Objects\RM战车.axf" - 0 Error(s), 12 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.4.5.0.pack
+                ARM::CMSIS:CORE:4.3.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 4.3.0
+
+<h2>Collection of Component include folders:</h2>
+  C:\Users\admin\Desktop\360\yaw角度差值\RM战车2.0新主控板标准库版\RTE
+  D:\ARM\CMSIS\4.5.0\CMSIS\Include
+  D:\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:4.3.0
+Build Time Elapsed:  00:00:11
+</pre>
+</body>
+</html>

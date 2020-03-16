@@ -1,0 +1,70 @@
+#define BYTE0(dwTemp) (*(char*)(&dwTemp))
+#define BYTE1(dwTemp) (*((char*)(&dwTemp)+1))
+#define BYTE2(dwTemp) (*((char*)(&dwTemp)+2))
+#define BYTE3(dwTemp) (*((char*)(&dwTemp)+3))          //宏定义
+
+/*******************************************
+函数功能：安照通讯协议向匿名地面站发送数据  
+发送数据类型：float型，一次函数发送一个数据
+ 格式：函数（发送的数据，功能码）
+*****************************************/
+
+void sent(float x,u8 fun)                
+{ unsigned char data_to_send[9];
+ 	unsigned t=0;
+  unsigned i=0;  
+	int len;	
+	t=0;len=0;
+	data_to_send[t++]=0xAA;
+	data_to_send[t++]=0xAA;
+	data_to_send[t++]=fun;
+	data_to_send[t++]=0;//暂时给零
+	data_to_send[t++]=BYTE3(x);
+	data_to_send[t++]=BYTE2(x);
+	data_to_send[t++]=BYTE1(x);
+	data_to_send[t++]=BYTE0(x);
+	data_to_send[3]=t-4;
+	for(i=0;i<t;i++)
+	{
+		len+=data_to_send[i];
+	}
+	data_to_send[t++]=len;
+		for(i=0;i<t;i++)
+			{
+				USART_SendData(USART1,data_to_send[i]);
+				while(USART_GetFlagStatus(USART1,USART_FLAG_TC)!=SET);
+			}
+}
+
+
+/*******************************************
+函数功能：安照通讯协议向匿名地面站发送数据  
+发送数据类型：int型，一次函数发送一个数据
+ 格式：函数（发送的数据，功能码）
+*****************************************/
+
+void sent(int x,u8 fun)                
+{ unsigned char data_to_send[7];
+ 	unsigned t=0;
+  unsigned i=0;  
+	int len;	
+	t=0;len=0;
+	data_to_send[t++]=0xAA;
+	data_to_send[t++]=0xAA;
+	data_to_send[t++]=fun;
+	data_to_send[t++]=0;//暂时给零
+	data_to_send[t++]=BYTE1(x);
+	data_to_send[t++]=BYTE0(x);
+	data_to_send[3]=t-4;
+	for(i=0;i<t;i++)
+	{
+		len+=data_to_send[i];
+	}
+	data_to_send[t++]=len;
+		for(i=0;i<t;i++)
+			{
+				USART_SendData(USART1,data_to_send[i]);
+				while(USART_GetFlagStatus(USART1,USART_FLAG_TC)!=SET);
+			}
+  
+}
